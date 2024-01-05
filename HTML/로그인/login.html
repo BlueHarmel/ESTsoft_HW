@@ -2,6 +2,12 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <style>
+        ul {
+            list-style:none;
+            padding-left: 0px;
+        }
+    </style>
     <title>로그인</title>
 </head>
 <body>
@@ -10,23 +16,28 @@
 <p>아이디와 비밀번호를 입력하고 로그인하세요</p>
 
 <form>
-    <div>
+    <ul>
+        <li>
     <label>
         아이디
         <input type="text">
     </label>
-    </div>
-    <div>
+        </li>
+        <li>
     <label>
         비밀번호
         <input type="password">
     </label>
-    </div>
-    <div>
+        </li>
+    <li>
     <input type="checkbox" id="save_id">
     <label for="save_id">아이디 저장</label>
-    </div>
-    <button type="button">로그인</button>
+    </li>
+        <li>
+        <button type="button">로그인</button>
+        </li>
+    </ul>
+
 </form>
 </body>
 </html>
