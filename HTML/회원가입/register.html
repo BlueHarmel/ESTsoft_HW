@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+</head>
+<body>
+<h1>회원가입</h1>
+<p>원활한 서비스 이용을 위해 회원가입을 해주세요</p>
+<form>
+    <label>
+        아이디
+        <input type="text">
+    </label>
+    <label>
+        이메일
+        <input type="email">
+    </label>
+    <label>
+        비밀번호
+        <input type="password">
+    </label>
+    <label>
+        닉네임
+        <input type="text">
+    </label>
+    <fieldset>
+        <legend>성별</legend>
+        <label>
+            <input type="radio" name = "gender" value="male" id="male">
+            남성
+        </label>
+        <label>
+            <input type="radio" name = "gender" value="female" id="female">
+            여성
+        </label>
+        <label>
+            <input type="radio" name = "gender" value="none" id="none">
+            선택 안함
+        </label>
+    </fieldset>
+    <fieldset>
+        <legend>사용 기술</legend>
+        <label>
+            <input type="checkbox" name = "html" id="html">
+            HTML
+        </label>
+        <label>
+            <input type="checkbox" name = "css" id="css">
+            CSS
+        </label>
+        <label>
+            <input type="checkbox" name = "js" id="js">
+            JavaScript
+        </label>
+        <label>
+            <input type="checkbox" name = "python" id="python">
+            Python
+        </label>
+        <label>
+            <input type="checkbox" name = "django" id="django">
+            Django
+        </label>
+        <label>
+            <input type="checkbox" name = "github" id="github">
+            GitHub
+        </label>
+        <label>
+            <input type="checkbox" name = "postgre" id="postgre">
+            PostgreSQL
+        </label>
+    </fieldset>
+    <button>회원가입</button>
+</form>
+</body>
+</html>
