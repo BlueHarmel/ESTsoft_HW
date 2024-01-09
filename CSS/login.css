@@ -1,0 +1,75 @@
+#login_area {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+}
+
+#login_area>p {
+    width: 215px;
+    height: 15px;
+    font-size: 10px;
+    margin-inline-start: 15px;
+}
+#login_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    width: 318px;
+    height: 40px;
+    border-radius: 4px;
+    background-color : #711BFF;
+    justify-content: center;
+    align-items:center;
+}
+#weniv-logo {
+    width: 64px;
+    height: 18px;
+}
+#login_btn>p {
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 15px;
+    text-align: center;
+    width: 34px;
+    height: 15px;
+}
+#options {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 13px;
+}
+#register {
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    align-items:center;
+}
+#register img {
+    width: 16px;
+    height: 16px;
+}
+#register>p {
+    width: 45px;
+    height: 15px;
+    font-size: 10px;
+}
+#find_area{
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    align-items:center;
+}
+#find_area img {
+    width: 16px;
+    height: 16px;
+}
+#find_area p {
+    width: 113px;
+    height: 15px;
+    font-size: 10px;
+}
+
