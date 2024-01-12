@@ -1,0 +1,44 @@
+div {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    height: 800px;
+    border-radius: 30px;
+    border: black solid 2px;
+}
+
+p {
+    text-align: center;
+    color: #5b2386;
+}
+
+div>p:first-of-type {
+    width: 396px;
+    height: 106px;
+    font-size: 50px;
+    margin: 50px 0 0 0;
+}
+
+div>p:last-of-type {
+    width: 233px;
+    height: 40px;
+    font-size: 21px;
+}
+
+img {
+    width: 433px;
+    height: 337px;
+}
+
+button {
+    width: 508px;
+    height: 66px;
+    border-radius: 56px;
+    background-color: #fcee21;
+    color: #5b2386;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 50px;
+}
