@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/hodu.css">
+    <title>Title</title>
+</head>
+<body>
+<nav>
+    <img src="img/icon/Logo-fin.svg" alt="호두_로고">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Support</a>
+    <button>Download</button>
+</nav>
+<header>
+    <p>Lorem ipsum is simply dummy text of the printing and</p>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+    <button>Download</button>
+</header>
+<main>
+    <div>
+        <img src="img/cat/bodyCat.svg" alt="누워있는 고양이">
+        <p>Lorem Ipsum is simply dummy text of the printing and dummy text</p>
+        <p>Lorem ipsum is simply dummy text of the painting and typesetting industry.</p>
+    </div>
+    <div>
+        <p>dummy text of the printing and dummy</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>LoremIpsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown</p>
+    </div>
+    <div>
+        <img src="img/cat/cat_list1.svg" alt="cat1">
+        <img src="img/cat/cat_list2.svg" alt="cat2">
+        <img src="img/cat/cat_list3.svg" alt="cat3">
+        <img src="img/cat/cat_list4.svg" alt="cat4">
+        <img src="img/cat/cat_list5.svg" alt="cat5">
+        <img src="img/cat/cat_list6.svg" alt="cat6">
+        <p>Continue exploring HODU</p>
+        <button>Show more</button>
+    </div>
+    <div>
+        <p>Where you'll be</p>
+        <p>330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
+        <div id="map" style="width:100%;height:350px;"></div>
+
+        <script type="text/javascript"
+                src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b26525de26e5c05b3454e79a19ea7b9f"></script>
+        <script>
+            var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+                mapOption = {
+                    center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                    level: 3 // 지도의 확대 레벨
+                };
+
+            // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+            var map = new kakao.maps.Map(mapContainer, mapOption);
+        </script>
+    </div>
+    <div>
+        <p>Subscribe to our Blog post</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>Lorem Ipsum has been the
+            industry's standard dummy text</p>
+        <form action="">
+            <img src="img/icon/mail.svg" alt="email">
+            <input type="email">
+            <button>Subscribe</button>
+        </form>
+    </div>
+    <div>
+        <img src="img/cat/footerCat.svg" alt="last cat">
+    </div>
+</main>
+<footer>
+    <img src="img/icon/Logo-fin.svg" alt="footer_Logo">
+    <img src="img/icon/icon-blog.svg" alt="blog">
+    <img src="img/icon/icon-insta.svg" alt="insta">
+    <img src="img/icon/icon-facebook.svg" alt="facebook">
+    <img src="img/icon/icon-youtube.svg" alt="youtube">
+</footer>
+</body>
+</html>

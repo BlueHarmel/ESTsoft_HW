@@ -29,71 +29,76 @@ button {
     font-weight: bold;
 }
 
-header{
+header {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-header>img:first-of-type {
+header > img:first-of-type {
     z-index: 1;
     top: 180px;
     width: 564px;
     margin-top: -100px;
 }
 
-header>img:last-of-type {
+header > img:last-of-type {
     z-index: 0;
     width: 261px;
 }
-main>img {
+
+main > img {
     bottom: 90px;
     margin-bottom: -100px;
 }
+
 main button:first-of-type {
     background: #f5df4d;
     width: 565px;
     height: 66px;
     margin: 50px 0;
 }
-main>div>button:first-of-type {
+
+main > div > button:first-of-type {
     background: #f5df4d;
     width: 356px;
     height: 66px;
 }
-main>div>button:last-of-type {
+
+main > div > button:last-of-type {
     width: 191px;
     height: 66px;
 }
 
-main p{
+main p {
     position: relative;
 }
 
-main>p:first-of-type{
+main > p:first-of-type {
     margin: 50px 0;
     color: #f5df4d;
     font-size: 22px;
 }
 
-main>p:nth-of-type(2){
+main > p:nth-of-type(2) {
     margin: 50px 0;
     font-size: 15px;
 }
 
-main>p:nth-of-type(2)>strong {
+main > p:nth-of-type(2) > strong {
     font-size: 20px;
 }
 
-main>p:nth-of-type(3),main>p:nth-of-type(4),main>p:nth-of-type(5), main>p:nth-of-type(6) {
+main > p:nth-of-type(3), main > p:nth-of-type(4), main > p:nth-of-type(5), main > p:nth-of-type(6) {
     font-size: 20px;
 }
-main>p:nth-of-type(3)>input, main>p:nth-of-type(4)>input {
+
+main > p:nth-of-type(3) > input, main > p:nth-of-type(4) > input {
     font-size: 20px;
     text-align: center;
 }
 
-main>p:nth-of-type(5)>strong, main>p:nth-of-type(6)>strong {
+main > p:nth-of-type(5) > strong, main > p:nth-of-type(6) > strong {
     font-size: 50px;
 }
 
@@ -101,7 +106,7 @@ footer {
     margin: 100px 0 0 0;
 }
 
-footer>img {
+footer > img {
     width: 125px;
     height: 25px;
 }
