@@ -239,7 +239,7 @@ hr {
     color: #F2E9D8;
 }
 
-#subscribe form {
+#subscribe>div:nth-of-type(2) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -250,7 +250,7 @@ hr {
     margin: 0 50px;
 }
 
-#subscribe form input {
+#subscribe div input {
     height: 90%;
     width: 100%;
     border: none;
@@ -263,6 +263,36 @@ hr {
 #subscribe button {
     width: 135px;
     margin: 0 6px;
+}
+
+#modal {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 600px;
+    height: 400px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../img/icon/modal-back.svg');
+    object-fit: cover;
+}
+
+.modal-content>img {
+    margin-top: 55px;
 }
 
 footer {
