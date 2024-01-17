@@ -7,6 +7,7 @@ body {
 
 header {
     background-color: #F2E9D8;
+    margin-bottom: 80px;
 }
 
 nav {
@@ -71,7 +72,7 @@ main > div:first-of-type {
     display: flex;
     width: 1278px;
     justify-content: space-between;
-    margin: 100px auto;
+    margin: 0 auto 120px auto;
 }
 
 main > div:first-of-type > img {
@@ -109,6 +110,7 @@ main > div:nth-of-type(2) > p:first-of-type, main > div:nth-of-type(2) > p:last-
 
 main > div:nth-of-type(2) > p:first-of-type {
     font-size: 48px;
+    margin-bottom: 40px;
 }
 
 
@@ -122,16 +124,16 @@ main > div:nth-of-type(2) > p:last-of-type {
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 1350px;
-    height: 860px;
+    height: 944px;
     overflow: auto;
-    margin: auto;
+    margin: 0 auto 28px auto;
 }
 
 .unlimit-scroll > div {
     display: flex;
     width: 1278px;
     height: 400px;
-    margin-bottom: 30px;
+    margin-bottom: 72px;
     justify-content: space-between;
     align-items: center;
 }
@@ -143,21 +145,33 @@ main > div:nth-of-type(2) > p:last-of-type {
     box-shadow: 5px 5px 20px #000000;
 }
 
-main > div:nth-of-type(4) {
+.continueArea {
     text-align: center;
     font-size: 24px;
     font-weight: 700;
+    margin-bottom: 80px;
 }
 
-main > div:nth-of-type(4) button {
+.continueArea > p {
+    margin-bottom: 28px;
+}
+
+.continueArea button {
     width: 143px;
     font-size: 16px;
     font-weight: 700;
 }
 
+hr {
+    width: 1278px;
+    color: #C4C4C4;
+    height: 1px;
+    margin: 68px auto;
+}
+
 main > div:nth-of-type(5) {
     width: 1278px;
-    margin: auto;
+    margin: 0 auto -20px auto;
 }
 
 main > div:nth-of-type(5) > p:first-of-type {
@@ -170,39 +184,7 @@ main > div:nth-of-type(5) > p:last-of-type {
     font-size: 16px;
     font-weight: 500;
     color: #606367;
-    margin-bottom: 50px;
-}
-
-main > div:last-of-type {
-    height: 340px;
-    overflow: hidden;
-    margin: auto;
-}
-
-main > div:last-of-type img {
-    width:100%;
-    height:100%;
-    object-fit: cover;
-}
-
-button {
-    height: 50px;
-    border-radius: 40px;
-    background-color: #D97652;
-    border-style: none;
-    color: #FFFFFF;
-}
-
-#logo-fin {
-    width: 130px;
-    height: 40px;
-}
-
-hr {
-    width: 1278px;
-    color: #C4C4C4;
-    height: 1px;
-    margin: 50px auto;
+    margin-bottom: 48px;
 }
 
 #map {
@@ -226,13 +208,13 @@ hr {
 }
 
 #subscribe > div {
-    margin: 0 40px;
+    margin: 0 58px;
 }
 
 #subscribe > div > p:first-of-type {
     font-size: 36px;
     font-weight: 700;
-    margin: 0;
+    margin-bottom: 18px;
 }
 
 #subscribe > div > p:last-of-type {
@@ -241,30 +223,30 @@ hr {
     color: #F2E9D8;
 }
 
-#subscribe>div:nth-of-type(2) {
+#subscribe > div:nth-of-type(2) {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     align-items: center;
     width: 530px;
     height: 60px;
     border-radius: 60px;
     background-color: #FFFFFF;
-    margin: 0 50px;
-}
-
-#subscribe div input {
-    height: 90%;
-    width: 100%;
-    border: none;
 }
 
 #subscribe img {
-    margin: 0 10px 0 25px;
+    margin: 18px 16px 18px 28px;
+}
+
+#subscribe div input {
+    height: 20px;
+    width: 184px;
+    border: none;
+    margin-right: 137px;
 }
 
 #subscribe button {
     width: 135px;
-    margin: 0 6px;
+    margin: 5px 6px;
 }
 
 #modal {
@@ -278,6 +260,7 @@ hr {
     background-color: rgba(0, 0, 0, 0.4);
     display: none;
 }
+
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
@@ -293,8 +276,33 @@ hr {
     object-fit: cover;
 }
 
-.modal-content>img {
+.modal-content > img {
     margin-top: 55px;
+}
+
+main > div:last-of-type {
+    height: 340px;
+    overflow: hidden;
+    margin: auto;
+}
+
+main > div:last-of-type img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    height: 50px;
+    border-radius: 40px;
+    background-color: #D97652;
+    border-style: none;
+    color: #FFFFFF;
+}
+
+#logo-fin {
+    width: 130px;
+    height: 40px;
 }
 
 footer {
@@ -306,7 +314,7 @@ footer {
     margin: auto;
 }
 
-footer>img {
+footer > img {
     width: 226px;
     height: 70px;
 }
@@ -314,10 +322,10 @@ footer>img {
 footer div {
     display: flex;
     justify-content: space-between;
-    width: calc(42px*4 + 22px*3);
+    width: calc(42px * 4 + 22px * 3);
 }
 
-footer div img{
+footer div img {
     width: 42px;
     height: 42px;
 }
@@ -326,7 +334,7 @@ footer div img{
     position: fixed;
     bottom: 184px;
     right: 29px;
-    visibility : hidden;
+    visibility: hidden;
     z-index: 2;
     background-image: url("../img/icon/scroll-top-btn.svg");
     width: 50px;
