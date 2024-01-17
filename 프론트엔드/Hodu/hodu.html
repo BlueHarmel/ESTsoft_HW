@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="js/unlimit.js"></script>
     <script defer src="js/modal.js"></script>
-    <script type="text/javascript"
-            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b26525de26e5c05b3454e79a19ea7b9f"></script>
+    <script src="js/apikey.js"></script>
+    <script type="text/javascript" src=`//dapi.kakao.com/v2/maps/sdk.js?appkey=${config.apikey}`></script>
     <script defer src="js/kakaomap.js">
     </script>
     <script defer src="js/upbutton.js"></script>
@@ -65,7 +67,7 @@
         <p>Continue exploring HODU</p>
         <button class="newImgButton">Show more</button>
     </div>
-    <hr/>
+    <hr>
     <div>
         <p>Where you'll be</p>
         <p>330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>

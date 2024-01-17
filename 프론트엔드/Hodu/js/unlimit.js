@@ -13,7 +13,6 @@ async function fetchImages(pageNum) {
         }
 
         const datas = await response.json();
-        console.log(datas);
         makeImageList(datas);
 
     } catch (error) {
@@ -27,12 +26,13 @@ function makeImageList(datas) {
             <img src="${datas[2].download_url}" alt="추가 이미지${datas[2].id}">
         </div>`
 }
+
 imageList.addEventListener('scroll', ()=>{
     if (timer) {
         clearTimeout(timer);
     }
     timer= setTimeout(()=> {
-        // .unlimit-scroll의 내부 높이 + 스크롤된 길이 + 10 >= 전체 컨텐츠의 높이
+        // .unlimit-scroll의 내부 높이 + 스크롤된 길이 + 20 >= 전체 컨텐츠의 높이
         // 위 조건이 만족될때 새로운 사진을 얻어온다.
         if(imageList.clientHeight + imageList.scrollTop + 20 >= imageList.scrollHeight){
             fetchImages(pageToFetch++);

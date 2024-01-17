@@ -1,7 +1,8 @@
+@import "reset.css";
+
 body {
     display: flex;
     flex-direction: column;
-    margin: 0;
 }
 
 header {
@@ -23,11 +24,7 @@ nav > div {
 }
 
 nav button {
-    margin-left: 40px;
-}
-
-nav a {
-    margin: 0 30px;
+    margin-left: 49px;
 }
 
 nav a {
@@ -35,6 +32,7 @@ nav a {
     color: #000000;
     font-size: 16px;
     font-weight: 400;
+    margin: 0 30px;
 }
 
 header button {
@@ -48,18 +46,20 @@ header > div {
     margin: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
 header > div p:first-of-type {
     font-size: 48px;
     font-weight: 700;
+    margin-bottom: 40px;
 }
 
 header > div p:last-of-type {
     font-size: 16px;
     font-weight: 400;
+    margin-bottom: 40px;
 }
 
 header > div img {
@@ -89,6 +89,7 @@ main > div:first-of-type > div {
 main > div:first-of-type > div > p:first-of-type {
     font-size: 36px;
     font-weight: 700;
+    margin-bottom: 30px;
 }
 
 main > div:first-of-type > div > p:last-of-type {
@@ -325,6 +326,7 @@ footer div img{
     position: fixed;
     bottom: 184px;
     right: 29px;
+    visibility : hidden;
     z-index: 2;
     background-image: url("../img/icon/scroll-top-btn.svg");
     width: 50px;

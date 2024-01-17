@@ -6,3 +6,5 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+#api keys
+../프론트엔드/Hodu/js/apikey.js
