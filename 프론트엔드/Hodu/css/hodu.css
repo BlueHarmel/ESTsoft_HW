@@ -115,26 +115,25 @@ main > div:nth-of-type(2) > p:last-of-type {
     font-size: 16px;
 }
 
-main > div:nth-of-type(3) {
+.unlimit-scroll {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 1300px;
     height: 860px;
+    overflow: auto;
+    margin: auto;
 }
 
-main > div:nth-of-type(3) > button {
-    width: 143px;
-}
-
-main > div:nth-of-type(3) > div {
+.unlimit-scroll > div {
     display: flex;
     width: 1278px;
     height: 378px;
-    margin: auto;
+    margin-bottom: 30px;
     justify-content: space-between;
 }
 
-main > div:nth-of-type(3) img {
+.unlimit-scroll img {
     width: 378px;
     height: 378px;
     border-radius: 30px;
