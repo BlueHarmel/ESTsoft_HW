@@ -98,6 +98,7 @@ main > div:first-of-type > div > p:last-of-type {
 
 main > div:nth-of-type(2) {
     text-align: center;
+    margin-bottom: 88px;
 }
 
 main > div:nth-of-type(2) > p:first-of-type, main > div:nth-of-type(2) > p:last-of-type > strong {
@@ -117,9 +118,9 @@ main > div:nth-of-type(2) > p:last-of-type {
 
 .unlimit-scroll {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 1300px;
+    width: 1350px;
     height: 860px;
     overflow: auto;
     margin: auto;
@@ -128,9 +129,10 @@ main > div:nth-of-type(2) > p:last-of-type {
 .unlimit-scroll > div {
     display: flex;
     width: 1278px;
-    height: 378px;
+    height: 400px;
     margin-bottom: 30px;
     justify-content: space-between;
+    align-items: center;
 }
 
 .unlimit-scroll img {
@@ -266,7 +268,7 @@ hr {
 
 #modal {
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     left: 0;
     top: 0;
     width: 100%;
@@ -317,4 +319,18 @@ footer div {
 footer div img{
     width: 42px;
     height: 42px;
+}
+
+.up-button {
+    position: fixed;
+    bottom: 184px;
+    right: 29px;
+    z-index: 2;
+    background-image: url("../img/icon/scroll-top-btn.svg");
+    width: 50px;
+    height: 50px;
+}
+
+.up-button:hover {
+    background-image: url("../img/icon/scroll-top-btn_hover.svg");
 }

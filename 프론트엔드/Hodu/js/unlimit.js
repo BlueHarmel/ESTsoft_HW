@@ -1,7 +1,10 @@
 const imageList = document.querySelector(".unlimit-scroll");
 const newImgButton = document.querySelector(".newImgButton");
 const continueArea = document.querySelector(".continueArea");
+
+let timer = null;
 let pageToFetch = 1;
+
 async function fetchImages(pageNum) {
     try {
         const response = await fetch(`https://picsum.photos/v2/list?page=${pageNum}&limit=3`);
@@ -19,21 +22,25 @@ async function fetchImages(pageNum) {
 }
 function makeImageList(datas) {
         imageList.innerHTML += `<div>
-            <img src="${datas[0].download_url}" alt="추가 이미지${datas.index}">
-            <img src="${datas[1].download_url}" alt="추가 이미지${datas.index}">
-            <img src="${datas[2].download_url}" alt="추가 이미지${datas.index}">
+            <img src="${datas[0].download_url}" alt="추가 이미지${datas[0].id}">
+            <img src="${datas[1].download_url}" alt="추가 이미지${datas[1].id}">
+            <img src="${datas[2].download_url}" alt="추가 이미지${datas[2].id}">
         </div>`
 }
-window.addEventListener('scroll', ()=>{
-    // 스크롤이 상단으로부터 얼마나 이동했는지 알아야 한다. (뷰포트의 높이 + 스크롤된 길이)
-    // 화면에 로딩된 페이지(body)의 높이를 알아야 한다.
-    // 뷰포트의 높이 + 스크롤된 길이 + 10 === 화면에 로딩된 페이지의 전체 높이
-    if(window.innerHeight + document.documentElement.scrollTop + 10 >= document.documentElement.offsetHeight){
-        fetchImages(pageToFetch++);
+imageList.addEventListener('scroll', ()=>{
+    if (timer) {
+        clearTimeout(timer);
     }
+    timer= setTimeout(()=> {
+        // .unlimit-scroll의 내부 높이 + 스크롤된 길이 + 10 >= 전체 컨텐츠의 높이
+        // 위 조건이 만족될때 새로운 사진을 얻어온다.
+        if(imageList.clientHeight + imageList.scrollTop + 20 >= imageList.scrollHeight){
+            fetchImages(pageToFetch++);
+        }
+    },200);
 });
 
 newImgButton.addEventListener("click", () => {
-    fetchImages(pageToFetch);
+    fetchImages(pageToFetch++);
     continueArea.innerHTML='';
 });
