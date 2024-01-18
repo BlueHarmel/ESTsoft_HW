@@ -2,12 +2,6 @@
 
 * {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-
-}
-
-body {
-    display: flex;
-    flex-direction: column;
 }
 
 header {
@@ -211,6 +205,124 @@ main > div:nth-of-type(5) > p:last-of-type {
     border-radius: 12px;
 }
 
+.radius_border {
+    border: 1px solid #919191;
+    border-radius: 5px;
+}
+
+.custom_typecontrol {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    overflow: hidden;
+    width: 130px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    font-size: 12px;
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+}
+
+.custom_typecontrol span {
+    display: block;
+    width: 65px;
+    height: 30px;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.custom_typecontrol .btn {
+    background: #fff;
+    background: linear-gradient(#fff, #e6e6e6);
+}
+
+.custom_typecontrol .btn:hover {
+    background: #f5f5f5;
+    background: linear-gradient(#f5f5f5, #e3e3e3);
+}
+
+.custom_typecontrol .btn:active {
+    background: #e6e6e6;
+    background: linear-gradient(#e6e6e6, #fff);
+}
+
+.custom_typecontrol .selected_btn {
+    color: #fff;
+    background: #5C9DF2;
+    background: linear-gradient(#5C9DF2, #88B6F2);
+}
+
+.custom_typecontrol .selected_btn:hover {
+    color: #fff;
+}
+
+.custom_zoomcontrol {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 36px;
+    height: 80px;
+    overflow: hidden;
+    z-index: 2;
+    background-color: #f5f5f5;
+}
+
+.custom_zoomcontrol span {
+    display: block;
+    width: 36px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.custom_zoomcontrol span img {
+    width: 15px;
+    height: 15px;
+    padding: 12px 0;
+    border: none;
+}
+
+.custom_zoomcontrol span:first-child {
+    border-bottom: 1px solid #bfbfbf;
+}
+
+#custom_fullscreen_toggle {
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    top: 136px;
+    background-color: #f5f5f5;
+    width: 40px;
+    height: auto;
+    padding: 6px;
+}
+
+#custom_fullscreen_toggle img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#custom_reload {
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    top: 180px;
+    background-color: #f5f5f5;
+    width: 40px;
+    height: auto;
+    padding: 5px;
+}
+
+#custom_reload img {
+    display: block;
+    width:100%;
+    height:auto;
+}
+
 #subscribe {
     display: flex;
     justify-content: space-between;
@@ -288,9 +400,10 @@ main > div:nth-of-type(5) > p:last-of-type {
 }
 
 .modal-content {
-
-    background-color: #fefefe;
-    margin: 15% auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: 1px solid #888;
     width: 600px;
     height: 400px;
@@ -299,7 +412,6 @@ main > div:nth-of-type(5) > p:last-of-type {
     flex-direction: column;
     align-items: center;
     background-image: url('../img/icon/modal-back.svg');
-    object-fit: cover;
 }
 
 .modal-content > img {

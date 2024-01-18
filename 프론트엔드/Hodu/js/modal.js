@@ -6,7 +6,7 @@ let input = document.getElementById("email-check");
 // 이메일 조건 확인 후, 모달창 열기
 openModalBtn.addEventListener("click", (event) => {
     event.preventDefault();
-    email = input.value;
+    let email = input.value;
     if (emailCheck(email)) {
         modal.style.display = "block";
         document.body.style.overflow = "hidden"; // 스크롤바 제거
@@ -26,10 +26,6 @@ closeModalBtn.addEventListener("click", () => {
 
 
 function emailCheck(email_address) {
-    email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
-    if (!email_regex.test(email_address)) {
-        return false;
-    } else {
-        return true;
-    }
+    const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+    return email_regex.test(email_address);
 }

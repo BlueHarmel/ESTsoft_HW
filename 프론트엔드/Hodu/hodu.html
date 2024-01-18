@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script defer src="js/unlimit.js"></script>
     <script defer src="js/modal.js"></script>
     <script type="text/javascript"
-            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b26525de26e5c05b3454e79a19ea7b9f"></script>
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b26525de26e5c05b3454e79a19ea7b9f&libraries=services,clusterer,drawing"></script>
     <script defer src="js/kakaomap.js">
     </script>
     <script defer src="js/upbutton.js"></script>
@@ -26,7 +25,9 @@
                 <a href="#">About</a>
                 <a href="#">Support</a>
             </div>
-            <button>Download</button>
+            <a href="img/cat/cat-family.jpg" download>
+                <button>Download</button>
+            </a>
         </div>
     </nav>
     <div>
@@ -34,7 +35,7 @@
             <p>Lorem ipsum is simply<br>dummy text of the printing and</p>
             <p>Lorem Ipsum is simply dummy text of the printing<br>and typesetting industry.<br>Lorem Ipsum has been the
                 industry's standard dummy text<br> ever since the 1500s, when an unknown</p>
-            <button>Download</button>
+            <a href="img/cat/cat-family.jpg" download><button>Download</button></a>
         </div>
         <img src="img/cat/고양이%201.svg" alt="박스고양이">
     </div>
@@ -73,7 +74,24 @@
     <div>
         <p>Where you'll be</p>
         <p>330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
-        <div id="map"></div>
+        <div id="map">
+            <!-- 지도타입 컨트롤 div 입니다 -->
+            <div class="custom_typecontrol radius_border">
+                <span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
+                <span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
+            </div>
+            <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
+            <div class="custom_zoomcontrol radius_border">
+                <span onclick="zoomIn()"><img
+                        src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png" alt="확대"></span>
+                <span onclick="zoomOut()"><img
+                        src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png" alt="축소"></span>
+            </div>
+            <button id="custom_fullscreen_toggle" class="radius_border">
+                <img id="toggle_screen" src="img/icon/full_fullscreen_icon.svg" alt="전체화면"></button>
+            <button id="custom_reload" class="radius_border" onclick="setCenter()"><img
+                    src="img/icon/marker_pin_icon.svg" alt="새로고침"></button>
+        </div>
     </div>
     <div id="subscribe">
         <div>
