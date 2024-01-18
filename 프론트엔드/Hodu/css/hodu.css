@@ -1,5 +1,10 @@
 @import "reset.css";
 
+* {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -33,13 +38,15 @@ nav a {
     color: #000000;
     font-size: 16px;
     font-weight: 400;
-    margin: 0 30px;
+    line-height: 20px;
+    margin: 0 0 0 30px;
 }
 
 header button {
     width: 140px;
     font-size: 16px;
     font-weight: 700;
+    line-height: 20px;
 }
 
 header > div {
@@ -55,12 +62,14 @@ header > div p:first-of-type {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 40px;
+    line-height: 60px;
 }
 
 header > div p:last-of-type {
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 40px;
+    line-height: 20px;
 }
 
 header > div img {
@@ -79,6 +88,7 @@ main > div:first-of-type > img {
     width: 660px;
     height: 390px;
     border-radius: 30px;
+    box-shadow: 5px 5px 20px #000000;
 }
 
 main > div:first-of-type > div {
@@ -91,11 +101,13 @@ main > div:first-of-type > div > p:first-of-type {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 30px;
+    line-height: 45px;
 }
 
 main > div:first-of-type > div > p:last-of-type {
     font-size: 16px;
     font-weight: 400;
+    line-height: 20px;
 }
 
 main > div:nth-of-type(2) {
@@ -111,12 +123,14 @@ main > div:nth-of-type(2) > p:first-of-type, main > div:nth-of-type(2) > p:last-
 main > div:nth-of-type(2) > p:first-of-type {
     font-size: 48px;
     margin-bottom: 40px;
+    line-height: 60px;
 }
 
 
 main > div:nth-of-type(2) > p:last-of-type {
     font-weight: 400;
     font-size: 16px;
+    line-height: 20px;
 }
 
 .unlimit-scroll {
@@ -133,7 +147,7 @@ main > div:nth-of-type(2) > p:last-of-type {
     display: flex;
     width: 1278px;
     height: 400px;
-    margin-bottom: 72px;
+    margin-bottom: 62px;
     justify-content: space-between;
     align-items: center;
 }
@@ -154,18 +168,20 @@ main > div:nth-of-type(2) > p:last-of-type {
 
 .continueArea > p {
     margin-bottom: 28px;
+    line-height: 30px;
 }
 
 .continueArea button {
     width: 143px;
     font-size: 16px;
     font-weight: 700;
+    line-height: 20px;
 }
 
 hr {
     width: 1278px;
-    color: #C4C4C4;
     height: 1px;
+    color: #C4C4C4;
     margin: 68px auto;
 }
 
@@ -177,12 +193,14 @@ main > div:nth-of-type(5) {
 main > div:nth-of-type(5) > p:first-of-type {
     font-size: 36px;
     font-weight: 700;
+    line-height: 45px;
     margin: 20px auto;
 }
 
 main > div:nth-of-type(5) > p:last-of-type {
     font-size: 16px;
     font-weight: 500;
+    line-height: 20px;
     color: #606367;
     margin-bottom: 48px;
 }
@@ -214,12 +232,14 @@ main > div:nth-of-type(5) > p:last-of-type {
 #subscribe > div > p:first-of-type {
     font-size: 36px;
     font-weight: 700;
+    line-height: 45px;
     margin-bottom: 18px;
 }
 
 #subscribe > div > p:last-of-type {
     font-size: 14px;
     font-weight: 400;
+    line-height: 18px;
     color: #F2E9D8;
 }
 
@@ -242,11 +262,16 @@ main > div:nth-of-type(5) > p:last-of-type {
     width: 184px;
     border: none;
     margin-right: 137px;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 #subscribe button {
     width: 135px;
     margin: 5px 6px;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 #modal {
@@ -262,9 +287,9 @@ main > div:nth-of-type(5) > p:last-of-type {
 }
 
 .modal-content {
+
     background-color: #fefefe;
     margin: 15% auto;
-    padding: 20px;
     border: 1px solid #888;
     width: 600px;
     height: 400px;
@@ -277,7 +302,32 @@ main > div:nth-of-type(5) > p:last-of-type {
 }
 
 .modal-content > img {
-    margin-top: 55px;
+    margin-top: 60px;
+    margin-bottom: 24px;
+}
+
+.modal-content > p:first-of-type {
+    font-size: 36px;
+    font-weight: 700;
+    color: #D97652;
+    line-height: 45px;
+    margin-bottom: 12px;
+}
+
+.modal-content > p:last-of-type {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    line-height: 18px;
+    margin-bottom: 38px;
+}
+
+#close-modal {
+    width: 183px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
 }
 
 main > div:last-of-type {
@@ -298,6 +348,7 @@ button {
     background-color: #D97652;
     border-style: none;
     color: #FFFFFF;
+    line-height: 20px;
 }
 
 #logo-fin {
