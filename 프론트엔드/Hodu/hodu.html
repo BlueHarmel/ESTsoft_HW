@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script defer src="js/unlimit.js"></script>
     <script defer src="js/modal.js"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b26525de26e5c05b3454e79a19ea7b9f"></script>
+    <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b26525de26e5c05b3454e79a19ea7b9f"></script>
     <script defer src="js/kakaomap.js">
     </script>
     <script defer src="js/upbutton.js"></script>
     <link rel="stylesheet" href="css/hodu.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css"/>
     <title>Hodu</title>
 </head>
 <body>
@@ -79,18 +81,18 @@
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>Lorem Ipsum has been the
                 industry's standard dummy text</p>
         </div>
-        <div>
-            <img src="img/icon/mail.svg" alt="email">
-            <input type="email" placeholder="Enter your e-mail address">
+        <form>
+            <label for="email-check"><img src="img/icon/mail.svg" alt="email"></label>
+            <input required id="email-check" type="email" placeholder="Enter your e-mail address">
             <button id="open-modal">Subscribe</button>
-        </div>
+        </form>
     </div>
     <div id="modal">
         <div class="modal-content">
             <img src="img/cat/modal-cat.svg" alt="">
             <p>Thank you!</p>
             <p>lorem Ipsum is simply dummy text of the printing industry.</p>
-            <button id="close-modal">OK! I Love HODU</button>
+            <button type="submit" id="close-modal">OK! I Love HODU</button>
         </div>
     </div>
     <div>
@@ -100,10 +102,10 @@
 <footer>
     <img src="img/icon/Logo-fin.svg" alt="footer_Logo">
     <div>
-        <img src="img/icon/icon-blog.svg" alt="blog">
-        <img src="img/icon/icon-insta.svg" alt="instagram">
-        <img src="img/icon/icon-facebook.svg" alt="facebook">
-        <img src="img/icon/icon-youtube.svg" alt="youtube">
+        <a href="#"><img src="img/icon/icon-blog.svg" alt="blog"></a>
+        <a href="#"><img src="img/icon/icon-insta.svg" alt="instagram"></a>
+        <a href="#"><img src="img/icon/icon-facebook.svg" alt="facebook"></a>
+        <a href="#"><img src="img/icon/icon-youtube.svg" alt="youtube"></a>
     </div>
 </footer>
 <a class="up-button" href="#"></a>
