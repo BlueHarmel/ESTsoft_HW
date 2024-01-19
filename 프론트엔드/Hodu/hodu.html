@@ -6,7 +6,7 @@
     <script defer src="js/unlimit.js"></script>
     <script defer src="js/modal.js"></script>
     <script type="text/javascript"
-            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b26525de26e5c05b3454e79a19ea7b9f&libraries=services,clusterer,drawing"></script>
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b26525de26e5c05b3454e79a19ea7b9f"></script>
     <script defer src="js/kakaomap.js">
     </script>
     <script defer src="js/upbutton.js"></script>
@@ -18,43 +18,44 @@
 <body>
 <header>
     <nav>
-        <img id="logo-fin" src="img/icon/Logo-fin.svg" alt="호두_로고">
+        <a id="nav_logo" href="#"><img src="img/icon/Logo-fin.svg" alt="호두 로고"></a>
         <div>
-            <div>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Support</a>
-            </div>
+            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Support</a>
+            <a href="img/cat/cat-family.jpg" download>
+                <button class="nav-button">Download</button>
+            </a>
+        </div>
+    </nav>
+    <div class="first-container">
+        <div>
+            <p>Lorem ipsum is simply dummy text of the printing and</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p>Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown</p>
             <a href="img/cat/cat-family.jpg" download>
                 <button>Download</button>
             </a>
         </div>
-    </nav>
-    <div>
-        <div>
-            <p>Lorem ipsum is simply<br>dummy text of the printing and</p>
-            <p>Lorem Ipsum is simply dummy text of the printing<br>and typesetting industry.<br>Lorem Ipsum has been the
-                industry's standard dummy text<br> ever since the 1500s, when an unknown</p>
-            <a href="img/cat/cat-family.jpg" download><button>Download</button></a>
-        </div>
-        <img src="img/cat/고양이%201.svg" alt="박스고양이">
+        <img src="img/cat/고양이%201.svg" alt="박스쓴 고양이">
     </div>
 </header>
 <main>
-    <div>
+    <div class="second-container">
         <img src="img/cat/bodyCat.svg" alt="누워있는 고양이">
         <div>
-            <p>Lorem Ipsum is simply<br>dummy text of the printing<br>and dummy text</p>
-            <p>Lorem ipsum is simply dummy text of the painting and typesetting<br>industry.</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and dummy text</p>
+            <p>Lorem ipsum is simply dummy text of the painting and typesetting industry.</p>
         </div>
     </div>
-    <div>
+    <div class="third-container">
         <p>dummy text of the printing and dummy</p>
         <p>Lorem Ipsum is simply <strong>dummy text</strong> of the printing and typesetting industry.<br>LoremIpsum has
             been the
             industry's standard dummy text ever since the 1500s, when an unknown</p>
     </div>
-    <div class="unlimit-scroll">
+    <div class="unlimit-scroll-container">
         <div>
             <img src="img/cat/cat_list1.svg" alt="cat1">
             <img src="img/cat/cat_list2.svg" alt="cat2">
@@ -66,12 +67,12 @@
             <img src="img/cat/cat_list6.svg" alt="cat6">
         </div>
     </div>
-    <div class="continueArea">
+    <div class="continue-container">
         <p>Continue exploring HODU</p>
         <button class="newImgButton">Show more</button>
     </div>
     <hr>
-    <div>
+    <div class="map-container">
         <p>Where you'll be</p>
         <p>330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
         <div id="map">
@@ -93,19 +94,19 @@
                     src="img/icon/marker_pin_icon.svg" alt="새로고침"></button>
         </div>
     </div>
-    <div id="subscribe">
+    <div id="subscribe-container">
         <div>
             <p>Subscribe to our Blog post</p>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>Lorem Ipsum has been the
                 industry's standard dummy text</p>
         </div>
-        <form>
+        <form action="" method="get">
             <label for="email-check"><img src="img/icon/mail.svg" alt="email"></label>
             <input required id="email-check" type="email" placeholder="Enter your e-mail address">
             <button id="open-modal">Subscribe</button>
         </form>
     </div>
-    <div id="modal">
+    <div id="modal-container">
         <div class="modal-content">
             <img src="img/cat/modal-cat.svg" alt="">
             <p>Thank you!</p>
@@ -113,17 +114,17 @@
             <button type="submit" id="close-modal">OK! I Love HODU</button>
         </div>
     </div>
-    <div>
+    <div class="last-container">
         <img src="img/cat/footerCat.svg" alt="last cat">
     </div>
 </main>
 <footer>
-    <img src="img/icon/Logo-fin.svg" alt="footer_Logo">
+    <a href="#"><img src="img/icon/Logo-fin.svg" alt="footer_Logo"></a>
     <div>
-        <a href="#"><img src="img/icon/icon-blog.svg" alt="blog"></a>
-        <a href="#"><img src="img/icon/icon-insta.svg" alt="instagram"></a>
-        <a href="#"><img src="img/icon/icon-facebook.svg" alt="facebook"></a>
-        <a href="#"><img src="img/icon/icon-youtube.svg" alt="youtube"></a>
+        <a class="sns-link" href="#"><img src="img/icon/icon-blog.svg" alt="blog"></a>
+        <a class="sns-link" href="#"><img src="img/icon/icon-insta.svg" alt="instagram"></a>
+        <a class="sns-link" href="#"><img src="img/icon/icon-facebook.svg" alt="facebook"></a>
+        <a class="sns-link" href="#"><img src="img/icon/icon-youtube.svg" alt="youtube"></a>
     </div>
 </footer>
 <a class="up-button" href="#"></a>

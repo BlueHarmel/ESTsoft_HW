@@ -1,6 +1,6 @@
-const imageList = document.querySelector(".unlimit-scroll");
+const imageList = document.querySelector(".unlimit-scroll-container");
 const newImgButton = document.querySelector(".newImgButton");
-const continueArea = document.querySelector(".continueArea");
+const continueArea = document.querySelector(".continue-container");
 
 let timer = null;
 let pageToFetch = 1;

@@ -1,7 +1,24 @@
 @import "reset.css";
 
-* {
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-drag: none;
+    user-select: none;
+}
+
+p, button, a, input {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+button {
+    height: 50px;
+    border-radius: 40px;
+    background-color: #D97652;
+    border-style: none;
+    color: #FFFFFF;
+    line-height: 20px;
 }
 
 header {
@@ -23,24 +40,23 @@ nav > div {
     align-items: center;
 }
 
-nav button {
-    margin-left: 49px;
-}
-
-nav a {
+.nav-link {
     text-decoration: none;
     color: #000000;
     font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
     margin: 0 0 0 30px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.nav-button {
+    margin-left: 49px;
 }
 
 header button {
     width: 140px;
     font-size: 16px;
     font-weight: 700;
-    line-height: 20px;
 }
 
 header > div {
@@ -59,28 +75,33 @@ header > div p:first-of-type {
     line-height: 60px;
 }
 
+header > div p:nth-of-type(2),
 header > div p:last-of-type {
     font-size: 16px;
     font-weight: 400;
-    margin-bottom: 40px;
+    margin-right: 275px;
     line-height: 20px;
 }
 
+header > div p:nth-of-type(2) {
+    margin-bottom: 0;
+}
+
+header > div p:last-of-type {
+    margin-bottom: 40px;
+}
+
 header > div img {
-    width: 415px;
-    height: 766px;
+    margin-left: 170px;
 }
 
 main > div:first-of-type {
     display: flex;
     width: 1278px;
-    justify-content: space-between;
     margin: 0 auto 120px auto;
 }
 
 main > div:first-of-type > img {
-    width: 660px;
-    height: 390px;
     border-radius: 30px;
     box-shadow: 5px 5px 20px #000000;
 }
@@ -89,6 +110,7 @@ main > div:first-of-type > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 110px;
 }
 
 main > div:first-of-type > div > p:first-of-type {
@@ -104,40 +126,40 @@ main > div:first-of-type > div > p:last-of-type {
     line-height: 20px;
 }
 
-main > div:nth-of-type(2) {
+.third-container {
     text-align: center;
     margin-bottom: 88px;
 }
 
-main > div:nth-of-type(2) > p:first-of-type, main > div:nth-of-type(2) > p:last-of-type > strong {
+.third-container > p:first-of-type, .third-container > p:last-of-type > strong {
     color: #D97652;
     font-weight: 700;
 }
 
-main > div:nth-of-type(2) > p:first-of-type {
+.third-container > p:first-of-type {
     font-size: 48px;
     margin-bottom: 40px;
     line-height: 60px;
 }
 
 
-main > div:nth-of-type(2) > p:last-of-type {
+.third-container > p:last-of-type {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
 }
 
-.unlimit-scroll {
+.unlimit-scroll-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 1350px;
-    height: 944px;
+    height: 924px;
     overflow: auto;
     margin: 0 auto 28px auto;
 }
 
-.unlimit-scroll > div {
+.unlimit-scroll-container > div {
     display: flex;
     width: 1278px;
     height: 400px;
@@ -146,26 +168,26 @@ main > div:nth-of-type(2) > p:last-of-type {
     align-items: center;
 }
 
-.unlimit-scroll img {
+.unlimit-scroll-container img {
     width: 378px;
     height: 378px;
     border-radius: 30px;
     box-shadow: 5px 5px 20px #000000;
 }
 
-.continueArea {
+.continue-container {
     text-align: center;
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 80px;
 }
 
-.continueArea > p {
+.continue-container > p {
     margin-bottom: 28px;
     line-height: 30px;
 }
 
-.continueArea button {
+.continue-container button {
     width: 143px;
     font-size: 16px;
     font-weight: 700;
@@ -176,22 +198,22 @@ hr {
     width: 1278px;
     height: 1px;
     color: #C4C4C4;
-    margin: 68px auto;
+    margin: 0 auto 68px auto;
 }
 
-main > div:nth-of-type(5) {
+.map-container {
     width: 1278px;
     margin: 0 auto -20px auto;
 }
 
-main > div:nth-of-type(5) > p:first-of-type {
+.map-container > p:first-of-type {
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
     margin: 20px auto;
 }
 
-main > div:nth-of-type(5) > p:last-of-type {
+.map-container > p:last-of-type {
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
@@ -221,7 +243,6 @@ main > div:nth-of-type(5) > p:last-of-type {
     padding: 0;
     z-index: 2;
     font-size: 12px;
-    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
 }
 
 .custom_typecontrol span {
@@ -319,11 +340,11 @@ main > div:nth-of-type(5) > p:last-of-type {
 
 #custom_reload img {
     display: block;
-    width:100%;
-    height:auto;
+    width: 100%;
+    height: auto;
 }
 
-#subscribe {
+#subscribe-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -337,27 +358,26 @@ main > div:nth-of-type(5) > p:last-of-type {
     top: 100px;
 }
 
-#subscribe > div {
-    margin: 0 0 0 58px;
+#subscribe-container > div {
+    margin-left: 58px;
 }
 
-#subscribe > div > p:first-of-type {
+#subscribe-container > div > p:first-of-type {
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
     margin-bottom: 18px;
 }
 
-#subscribe > div > p:last-of-type {
+#subscribe-container > div > p:last-of-type {
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
     color: #F2E9D8;
 }
 
-#subscribe > form {
+#subscribe-container > form {
     display: flex;
-    /*justify-content: space-between;*/
     align-items: center;
     width: 530px;
     height: 60px;
@@ -366,11 +386,11 @@ main > div:nth-of-type(5) > p:last-of-type {
     margin-right: 58px;
 }
 
-#subscribe label {
+#subscribe-container label {
     margin: 18px 16px 18px 28px;
 }
 
-#subscribe form input {
+#subscribe-container form input {
     height: 20px;
     width: 184px;
     border: none;
@@ -380,14 +400,14 @@ main > div:nth-of-type(5) > p:last-of-type {
     font-weight: 400;
 }
 
-#subscribe button {
+#subscribe-container button {
     width: 135px;
     margin: 5px 6px;
     font-size: 16px;
     font-weight: 700;
 }
 
-#modal {
+#modal-container {
     position: fixed;
     z-index: 3;
     left: 0;
@@ -455,20 +475,6 @@ main > div:last-of-type img {
     object-fit: cover;
 }
 
-button {
-    height: 50px;
-    border-radius: 40px;
-    background-color: #D97652;
-    border-style: none;
-    color: #FFFFFF;
-    line-height: 20px;
-}
-
-#logo-fin {
-    width: 130px;
-    height: 40px;
-}
-
 footer {
     display: flex;
     justify-content: space-between;
@@ -478,18 +484,18 @@ footer {
     margin: auto;
 }
 
-footer > img {
+footer > a img {
     width: 226px;
     height: 70px;
 }
 
-footer div {
+footer > div {
     display: flex;
     justify-content: space-between;
     width: calc(42px * 4 + 22px * 3);
 }
 
-footer div img {
+.sns-link > img {
     width: 42px;
     height: 42px;
 }

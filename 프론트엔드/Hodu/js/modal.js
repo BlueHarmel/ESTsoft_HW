@@ -1,4 +1,4 @@
-const modal = document.getElementById("modal");
+const modal = document.getElementById("modal-container");
 const openModalBtn = document.getElementById("open-modal");
 const closeModalBtn = document.getElementById("close-modal");
 let input = document.getElementById("email-check");
