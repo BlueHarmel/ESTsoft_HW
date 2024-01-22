@@ -21,11 +21,10 @@ async function fetchImages(pageNum) {
 }
 
 function makeImageList(datas) {
-    let lineNum = (pageToFetch/3)+3;
     imageList.innerHTML += `<div>
-            <img class="cat-img${lineNum}" src="https://cataas.com/cat/${datas[0]._id}" alt="추가 이미지(${datas[0].tags})">
-            <img class="cat-img${lineNum}" src="https://cataas.com/cat/${datas[1]._id}" alt="추가 이미지(${datas[1].tags})">
-            <img class="cat-img${lineNum}" src="https://cataas.com/cat/${datas[2]._id}" alt="추가 이미지(${datas[2].tags})">
+            <img class="cat-img" src="https://cataas.com/cat/${datas[0]._id}" alt="추가 이미지(${datas[0].tags})">
+            <img class="cat-img" src="https://cataas.com/cat/${datas[1]._id}" alt="추가 이미지(${datas[1].tags})">
+            <img class="cat-img" src="https://cataas.com/cat/${datas[2]._id}" alt="추가 이미지(${datas[2].tags})">
         </div>`
 }
 
@@ -45,7 +44,7 @@ imageList.addEventListener('scroll', () => {
         if (imageList.clientHeight + imageList.scrollTop + 20 >= imageList.scrollHeight) {
             fetchImages(pageToFetch+=3);
         }
-    }, 50);
+    }, 100);
 });
 
 newImgButton.addEventListener("click", () => {
