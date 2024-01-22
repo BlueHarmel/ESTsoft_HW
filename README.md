@@ -1,3 +1,12 @@
+<style>
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary {
+    list-style-type: none;
+}
+</style>
+
 # ESTsoft_HW
 오르미 과제 모음 레포입니다
 프로젝트 명을 클릭하면 자세한 내용을 확인하실 수 있습니다!
@@ -12,14 +21,14 @@
   <ol>
     <li>
       <details>
-        <summary>1.header</summary>
+        <summary>header</summary>
         - 페이지 내 이동기능
         - 고양이 가족사진 다운로드 버튼
       </details>
     </li>
     <li>
       <details>
-        <summary>2.main</summary>
+        <summary>main</summary>
         - 고양이 사진 무한 스크롤 컨테이너
         - 카카오 API 지도
         - 구독 기능 + 모달창
@@ -27,7 +36,7 @@
     </li>
     <li>
       <details>
-        <summary>3.footer</summary>
+        <summary>footer</summary>
         - SNS 연결 링크
         - 페이지 맨 위로 이동
       </details>
