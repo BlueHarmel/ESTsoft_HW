@@ -1,5 +1,9 @@
 @import "reset.css";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -153,13 +157,33 @@ main > div:first-of-type > div > p:last-of-type {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 1350px;
+    width: 1330px;
     height: 924px;
-    overflow: auto;
+    overflow-y: scroll;
     margin: 0 auto 28px auto;
 }
 
-.unlimit-scroll-container > div {
+.unlimit-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.progress-container {
+    position: absolute;
+    top: 2420px;
+    height: 50px;
+    width: 100%;
+    visibility: hidden;
+}
+
+.progress-bar {
+    width: 0;
+    height: 10px;
+    background-color: #D97652;
+    visibility: hidden;
+    border-radius: 30px;
+}
+
+.unlimit-scroll-container > div:not(.progress-bar .container) {
     display: flex;
     width: 1278px;
     height: 400px;
@@ -201,19 +225,19 @@ hr {
     margin: 0 auto 68px auto;
 }
 
-.map-container {
+#map-container {
     width: 1278px;
     margin: 0 auto -20px auto;
 }
 
-.map-container > p:first-of-type {
+#map-container > p:first-of-type {
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
     margin: 20px auto;
 }
 
-.map-container > p:last-of-type {
+#map-container > p:last-of-type {
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
@@ -272,8 +296,8 @@ hr {
 
 .custom_typecontrol .selected_btn {
     color: #fff;
-    background: #5C9DF2;
-    background: linear-gradient(#5C9DF2, #88B6F2);
+    background: #D97652;
+    background: linear-gradient(#D97652, #d6b5a9);
 }
 
 .custom_typecontrol .selected_btn:hover {
