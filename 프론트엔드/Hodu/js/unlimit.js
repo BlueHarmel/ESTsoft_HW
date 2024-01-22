@@ -14,16 +14,18 @@ async function fetchImages(pageNum) {
         }
         const datas = await response.json();
         makeImageList(datas);
+
     } catch (error) {
         console.error('데이터를 가져오는데 문제가 발생했습니다 :', error);
     }
 }
 
 function makeImageList(datas) {
+    let lineNum = (pageToFetch/3)+3;
     imageList.innerHTML += `<div>
-            <img src="https://cataas.com/cat/${datas[0]._id}" alt="추가 이미지 (${datas[0].tags})">
-            <img src="https://cataas.com/cat/${datas[1]._id}" alt="추가 이미지 (${datas[1].tags})">
-            <img src="https://cataas.com/cat/${datas[2]._id}" alt="추가 이미지 (${datas[2].tags})">
+            <img class="cat-img${lineNum}" src="https://cataas.com/cat/${datas[0]._id}" alt="추가 이미지(${datas[0].tags})">
+            <img class="cat-img${lineNum}" src="https://cataas.com/cat/${datas[1]._id}" alt="추가 이미지(${datas[1].tags})">
+            <img class="cat-img${lineNum}" src="https://cataas.com/cat/${datas[2]._id}" alt="추가 이미지(${datas[2].tags})">
         </div>`
 }
 
@@ -43,7 +45,7 @@ imageList.addEventListener('scroll', () => {
         if (imageList.clientHeight + imageList.scrollTop + 20 >= imageList.scrollHeight) {
             fetchImages(pageToFetch+=3);
         }
-    }, 200);
+    }, 50);
 });
 
 newImgButton.addEventListener("click", () => {
