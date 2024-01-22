@@ -21,9 +21,9 @@ async function fetchImages(pageNum) {
 
 function makeImageList(datas) {
     imageList.innerHTML += `<div>
-            <img src="http://cataas.com/cat/${datas[0]._id}" alt="추가 이미지 (${datas[0].tags})">
-            <img src="http://cataas.com/cat/${datas[1]._id}" alt="추가 이미지 (${datas[1].tags})">
-            <img src="http://cataas.com/cat/${datas[2]._id}" alt="추가 이미지 (${datas[2].tags})">
+            <img src="https://cataas.com/cat/${datas[0]._id}" alt="추가 이미지 (${datas[0].tags})">
+            <img src="https://cataas.com/cat/${datas[1]._id}" alt="추가 이미지 (${datas[1].tags})">
+            <img src="https://cataas.com/cat/${datas[2]._id}" alt="추가 이미지 (${datas[2].tags})">
         </div>`
 }
 
@@ -43,11 +43,11 @@ imageList.addEventListener('scroll', () => {
         if (imageList.clientHeight + imageList.scrollTop + 20 >= imageList.scrollHeight) {
             fetchImages(pageToFetch+=3);
         }
-    }, 100);
+    }, 200);
 });
 
 newImgButton.addEventListener("click", () => {
-    fetchImages(pageToFetch++);
+    fetchImages(pageToFetch);
     continueArea.innerHTML = '';
     progressContainer.style.visibility = "visible";
 });
