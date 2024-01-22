@@ -1,19 +1,10 @@
-<style>
-summary::-webkit-details-marker {
-  display: none;
-}
-summary {
-  list-style-type: none;
-}
-</style>
-
 # ESTsoft_HW
 오르미 과제 모음 레포입니다
 프로젝트 명을 클릭하면 자세한 내용을 확인하실 수 있습니다!
 
 <details>
   <summary>Front-End 개인 프로젝트: Hodu</summary>
-  <a href="https://blueharmel.github.io/ESTsoft_HW/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C/Hodu/hodu.html" target=_blank>프로젝트 페이지 보기</a>
+  <a list-style-type= 'none' href="https://blueharmel.github.io/ESTsoft_HW/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C/Hodu/hodu.html" target="_blank">프로젝트 페이지 보기</a>
 
   오르미 4기의 첫 개인 프로젝트로 진행했습니다!
 
