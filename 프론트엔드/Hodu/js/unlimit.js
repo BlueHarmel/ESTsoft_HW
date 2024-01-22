@@ -4,11 +4,11 @@ const continueArea = document.querySelector(".continue-container");
 const progressContainer = document.querySelector('.progress-container');
 
 let timer = null;
-let pageToFetch = 1;
+let pageToFetch = 0;
 
 async function fetchImages(pageNum) {
     try {
-        const response = await fetch(`https://picsum.photos/v2/list?page=${pageNum}&limit=3`);
+        const response = await fetch(`https://cataas.com/api/cats?skip=${pageNum}&limit=3`);
         if (!response.ok) {
             throw new Error('네트워크 응답에 문제가 있습니다.');
         }
@@ -21,9 +21,9 @@ async function fetchImages(pageNum) {
 
 function makeImageList(datas) {
     imageList.innerHTML += `<div>
-            <img src="${datas[0].download_url}" alt="추가 이미지${datas[0].id}">
-            <img src="${datas[1].download_url}" alt="추가 이미지${datas[1].id}">
-            <img src="${datas[2].download_url}" alt="추가 이미지${datas[2].id}">
+            <img src="http://cataas.com/cat/${datas[0]._id}" alt="추가 이미지 (${datas[0].tags})">
+            <img src="http://cataas.com/cat/${datas[1]._id}" alt="추가 이미지 (${datas[1].tags})">
+            <img src="http://cataas.com/cat/${datas[2]._id}" alt="추가 이미지 (${datas[2].tags})">
         </div>`
 }
 
@@ -41,7 +41,7 @@ imageList.addEventListener('scroll', () => {
         // .unlimit-scroll의 내부 높이 + 스크롤된 길이 + 20 >= 전체 컨텐츠의 높이
         // 위 조건이 만족될때 새로운 사진을 얻어온다.
         if (imageList.clientHeight + imageList.scrollTop + 20 >= imageList.scrollHeight) {
-            fetchImages(pageToFetch++);
+            fetchImages(pageToFetch+=3);
         }
     }, 100);
 });
