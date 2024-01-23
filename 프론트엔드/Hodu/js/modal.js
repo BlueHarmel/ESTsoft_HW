@@ -32,7 +32,7 @@ openModalBtn.addEventListener("click", (event) => {
         input.setCustomValidity("이메일이 입력되지 않았습니다.");
         input.reportValidity(); // 유효성 메시지를 사용자에게 즉시 표시
     } else {
-        input.setCustomValidity("이메일 형식이 잘못되었습니다.");
+        input.setCustomValidity("이메일 형식이 아닙니다.");
         input.reportValidity(); // 유효성 메시지를 사용자에게 즉시 표시
     }
 });
