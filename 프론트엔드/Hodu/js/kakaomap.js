@@ -1,21 +1,40 @@
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+/**
+ * 지도를 표시할 div
+ * @type {HTMLElement}
+ * */
+var mapContainer = document.getElementById('map'),
     mapOption = {
-        center: new kakao.maps.LatLng(33.4423379727783, 126.571449734542), // 지도의 중심좌표
+        center: new kakao.maps.LatLng(33.4423379727783, 126.571449734542), // 지도의 최초 중심좌표
         level: 3 // 지도의 확대 레벨
     };
-// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+/**
+ * 지도를 표시할 div와  지도 옵션으로  지도를 생성
+ * @type {kakao.maps.Map}
+ */
 var map = new kakao.maps.Map(mapContainer, mapOption);
-// 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수입니다
+/**
+ * 마커의 좌표
+ * @type {kakao.maps.LatLng}
+ */
 var markerPosition  = new kakao.maps.LatLng(33.4423379727783, 126.571449734542);
 
-// 마커를 생성합니다
+/**
+ * markerPosition을 position값으로 가지는 마커객체를 생성
+ * @type {kakao.maps.Marker}
+ */
 var marker = new kakao.maps.Marker({
     position: markerPosition
 });
 
-// 마커가 지도 위에 표시되도록 설정합니다
+/**
+ * 마커객체를 markerPosition에 표시
+ */
 marker.setMap(map);
 
+/**
+ * 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수
+ * @param maptype
+ */
 function setMapType(maptype) {
     var roadmapControl = document.getElementById('btnRoadmap');
     var skyviewControl = document.getElementById('btnSkyview');
@@ -30,16 +49,24 @@ function setMapType(maptype) {
     }
 }
 
-// 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+/**
+ * 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수
+ */
 function zoomIn() {
     map.setLevel(map.getLevel() - 1);
 }
 
-// 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+/**
+ * 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 축소하는 함수
+ */
 function zoomOut() {
     map.setLevel(map.getLevel() + 1);
 }
 
+/**
+ * 전체화면과 전체화면 취소 토글버튼
+ * @type {HTMLElement}
+ */
 const toggleFullscreenButton = document.getElementById('custom_fullscreen_toggle');
 const toggleImg = document.getElementById('toggle_screen')
 toggleFullscreenButton.addEventListener('click', function() {
@@ -50,6 +77,10 @@ toggleFullscreenButton.addEventListener('click', function() {
     }
 });
 
+/**
+ * 클릭하면, map을 전체화면으로 확장시킨다.
+ * @param element
+ */
 function enterFullscreen(element) {
     if (element.requestFullscreen) {
         element.requestFullscreen();
@@ -63,6 +94,9 @@ function enterFullscreen(element) {
     toggleImg.src='img/icon/close_fullscreen_icon.svg';
 }
 
+/**
+ * 클릭하면 전체화면을 해제한다.
+ */
 function exitFullscreen() {
     if (document.exitFullscreen) {
         document.exitFullscreen();
@@ -76,7 +110,9 @@ function exitFullscreen() {
     toggleImg.src='img/icon/full_fullscreen_icon.svg';
 }
 
+/**
+ * 지도 중심을 핀 위치로 이동
+ */
 function setCenter() {
-    // 지도 중심을 핀 위치로 이동 시킵니다
     map.setCenter(markerPosition);
 }

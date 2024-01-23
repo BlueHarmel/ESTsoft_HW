@@ -444,7 +444,7 @@ hr {
     margin: 18px 16px 18px 28px;
 }
 
-#subscribe-container form input {
+#email-input {
     height: 20px;
     width: 184px;
     border: none;
