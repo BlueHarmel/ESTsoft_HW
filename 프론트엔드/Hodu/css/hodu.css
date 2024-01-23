@@ -529,7 +529,7 @@ main > div:last-of-type img {
     object-fit: cover;
 }
 
-footer {
+footer > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -538,12 +538,12 @@ footer {
     margin: auto;
 }
 
-footer > a img {
+footer > div > a img {
     width: 226px;
     height: 70px;
 }
 
-footer > div {
+.sns-link-container {
     display: flex;
     justify-content: space-between;
     width: calc(42px * 4 + 22px * 3);

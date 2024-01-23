@@ -3,7 +3,6 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         center: new kakao.maps.LatLng(33.4423379727783, 126.571449734542), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
     };
-
 // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
 var map = new kakao.maps.Map(mapContainer, mapOption);
 // 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수입니다
@@ -78,6 +77,6 @@ function exitFullscreen() {
 }
 
 function setCenter() {
-    // 지도 중심을 이동 시킵니다
+    // 지도 중심을 핀 위치로 이동 시킵니다
     map.setCenter(markerPosition);
 }
