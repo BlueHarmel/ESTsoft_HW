@@ -4,7 +4,7 @@
 프로젝트명을 클릭하면 자세한 내용을 확인하실 수 있습니다!
 
 <details>
-  <summary display="inline-block" list-style="none">Front-End 개인 프로젝트: Hodu</summary>
+  <summary>Front-End 개인 프로젝트: Hodu</summary>
 
   <a list-style-type= 'none' href="https://blueharmel.github.io/ESTsoft_HW/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C/Hodu/hodu.html" target="_blank">프로젝트 페이지 보기</a>
 
@@ -37,6 +37,7 @@
 <img width="500px" src="프론트엔드/Hodu/img/gif/snsLink.gif" alt="SNS연결 예시"></img>
 - 페이지 상단으로 이동  
 <img width="500px" src="프론트엔드/Hodu/img/gif/moveInPageFooter.gif" alt="페이지상단 이동 예시"></img>
+</details>
 </details>
 
 <h3>사용 기술 스택</h3>
