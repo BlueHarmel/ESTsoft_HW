@@ -1,3 +1,4 @@
+package WeeklyQuiz.First;
 import java.math.BigDecimal;
 
 public class Product {
@@ -5,7 +6,7 @@ public class Product {
     private BigDecimal price;
     private double weight;
 
-    public Product(String name, BigDecimal price, double weight){
+    public Product(String name, BigDecimal price, double weight) {
         this.name = name;
         this.price = price;
         this.weight = weight;
@@ -35,11 +36,12 @@ public class Product {
         this.weight = weight;
     }
 
+    @Override
     public String toString() {
         return """
                 품목명 : %s
                 배송비 포함 가격 : %s
                 무게 : %f
-                """.formatted(getName(),getPrice(),getWeight());
+                """.formatted(getName(), getPrice(), getWeight());
     }
 }
