@@ -8,11 +8,11 @@ public class Cart {
     }
 
     public int calculateDeliveryCharge() {
-        int deliveryCharge = 0;
+        int deliveryCharge;
         double weight = 0;
         int price = 0;
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < products.length; i++) {
             weight += this.products[i].getWeight();
             price += this.products[i].getPrice();
         }

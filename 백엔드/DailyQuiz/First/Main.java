@@ -1,7 +1,5 @@
 package DailyQuiz.First;
 
-import java.math.BigDecimal;
-
 public class Main {
     public static void main(String[] args) {
         Product beauty = new Beauty("beauty", 30000, 2);
@@ -10,6 +8,6 @@ public class Main {
 
         Cart cart = new Cart(new Product[]{beauty, grocery, largeAppliance});
         int totalDeliveryCharge = cart.calculateDeliveryCharge();
-        System.out.println(totalDeliveryCharge);    // 결과: 9000
+        System.out.println(totalDeliveryCharge);// 결과: 9000
     }
 }
