@@ -20,6 +20,7 @@ public class Main {
 
         while(choice != 6) {
             System.out.println(menu);
+            System.out.print("원하는 옵션의 변호를 입력해주세요: ");
             choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
                 case 1:
@@ -58,6 +59,8 @@ public class Main {
                     break;
                 case 6:
                     break;
+                default:
+                    System.out.println("유효하지 않은 옵션입니다. 다시 입력해주세요!");
             }
         }
     }
