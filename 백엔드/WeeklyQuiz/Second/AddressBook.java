@@ -13,7 +13,7 @@ public class AddressBook {
             return;
         }
         for (Contact pInfo : contacts) {
-            if (pInfo.getClass().toString().equals("class WeeklyQuiz.Second.BusinessContact")) {
+            if(pInfo instanceof BusinessContact){
                 System.out.printf("이름: %s,전화번호: %s, 회사: %s%n", pInfo.getName(), pInfo.getPhoneNumber(), ((BusinessContact) pInfo).getCompany());
             } else {
                 System.out.printf("이름: %s,전화번호: %s, 관계: %s%n", pInfo.getName(), pInfo.getPhoneNumber(), ((PersonalContact) pInfo).getRelation());
@@ -40,7 +40,7 @@ public class AddressBook {
         cnt = 0;
         for (Contact pInfo : contacts) {
             if (name.equals(pInfo.getName())) {
-                if(pInfo.getClass().toString().equals("class WeeklyQuiz.Second.BusinessContact")) {
+                if(pInfo instanceof BusinessContact) {
                     System.out.printf("이름: %s,전화번호: %s, 회사: %s%n", pInfo.getName(), pInfo.getPhoneNumber(), ((BusinessContact) pInfo).getCompany());
                     cnt++;
                 } else {
