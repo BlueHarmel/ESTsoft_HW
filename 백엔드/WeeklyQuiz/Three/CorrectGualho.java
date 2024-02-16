@@ -14,11 +14,11 @@ public class CorrectGualho {
     static boolean solution(String s) {
         boolean answer = true;
         char[] charArray = s.toCharArray();
-        Stack<String> stack = new Stack<>();
+        Stack<Character> stack = new Stack<>();
 
         for (char c : charArray) {
             if (c == '(') {
-                stack.push(String.valueOf(c));
+                stack.push(c);
             } else if (!stack.isEmpty()) {
                 stack.pop();
             } else {
